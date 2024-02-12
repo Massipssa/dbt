@@ -1,0 +1,14 @@
+bdt_core_test:
+  company-name:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: database-1.cg2pezzwkrag.us-east-1.rds.amazonaws.com
+      user: postgres
+      password: Imma66!!
+      port: 5432
+      dbname: database-1
+      schema: dbt_alice
+      threads: 4
+  
