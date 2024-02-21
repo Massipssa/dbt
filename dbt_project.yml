@@ -19,6 +19,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -39,6 +40,10 @@ vars:
   snowplow:
     app_ids: ['marketing', 'app', 'landing-page']
 
+##--------------------------------------------------------------
+##    Models
+##--------------------------------------------------------------
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -50,3 +55,29 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+
+
+##--------------------------------------------------------------
+##    Seeds
+##--------------------------------------------------------------
+
+seeds:
+  bdt_core_test:
+    +enabled: true
+    +schema: seed_data
+    # This configures seeds/country_codes.csv
+    country_codes:
+      # Override column types
+      +column_types:
+        country_code: varchar(2)
+        country_name: varchar(32)
+    #marketing:
+    #  +schema: marketing # this will take precedence
+
+
+##--------------------------------------------------------------
+##    Sources
+##--------------------------------------------------------------
+sources:
+  source:
+    +enabled: true    

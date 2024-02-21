@@ -4,11 +4,11 @@ bdt_core_test:
   outputs:
     dev:
       type: postgres
-      host: database-1.cg2pezzwkrag.us-east-1.rds.amazonaws.com
-      user: postgres
-      password: Imma66!!
+      host: localhost
+      user: admin
+      password: admin1234
       port: 5432
-      dbname: database-1
-      schema: dbt_alice
+      dbname: testdb
+      schema: public
       threads: 4
   

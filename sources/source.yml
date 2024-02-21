@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bdt_core_test
+    schema: public
+    tables: 
+      - name: clients
+        columns: 
+          - name: id
+            description: Client id
+          - name: fist_name
+            description: Client first name

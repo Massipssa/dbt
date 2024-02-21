@@ -20,6 +20,14 @@ Try running the following commands:
 - CSV files that can be referenced by the downstream models using ref funtion
 - Usefull for static data which changes infrequently
 
+## Marcos
+
+Are pieces of codes that can be resused multiple times in your code, similar to function in other programming langauges.
+
+## Sources
+
+Delacre the tables that can be used in the model
+
 ## Variables
 
 - Declare variable using config file (To use for variables that rarely change)
